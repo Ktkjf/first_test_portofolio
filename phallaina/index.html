@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Phallaina — Chapter 1</title>
+        <meta name="author" content="Christophe da Silva">
+        <meta name="Description" content="Phallaina by Marietta Ren, the first scrolling graphic novel. This is an experimental WebGL port of the first chapter with no sound." />
+        <meta name="Copyright" content="copyright France TV nouvelles ecritures, Small Bang. 2016-2019" />
+
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="css/phallaina.css" rel="stylesheet" >
+        <link rel="shortcut icon" href="img/favicon.png" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-543852-8"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-543852-8');
+        </script>
+    </head>
+    <body>
+        <canvas id="renderer" class="portrait"></canvas>
+        <div id="cover"><img src="img/loading.png" class="rotating loader"/></div>
+
+        <article id="menu">
+            <h1>Phallaina<img src="img/phallaina_logo.png" alt="Phallaina" srcset="img/phallaina_logo.png 1x, img/phallaina_logo@2x.png 2x"/></h1>
+
+            <h2>The first scrolling graphic novel</h2>
+            <p>This is an experimental WebGL port of the first chapter with no sound.</p>
+
+            <div class="buttons">
+                <a href="index.html#" id="btn_start">Start reading</a>
+                <img src="img/loading.png" id="btn_loader" class="rotating loader"/>
+            </div>
+
+            <div class="credits">
+                <p>
+                    WebGL / WASM port by <a href="../index.html" target="_blank" rel="noopener">Christophe da Silva</a>.<br/>
+                    To read the full 16 chapters, download the free app:<br>
+                </p>
+
+                <a href="https://itunes.apple.com/us/app/phallaina/id1310744939" target="_blank"  rel="noopener" class="store"><img src="img/store_apple.png" srcset="img/store_apple.png 1x, img/store_apple@2x.png 2x" alt="Phallaina app on the apple store"/></a>
+                <a href="https://play.google.com/store/apps/details?id=fr.francetv.apps.nve.phallaina" target="_blank" rel="noopener" class="store last"><img src="img/store_google.png" srcset="img/store_google.png 1x, img/store_google@2x.png 2x" alt="Phallaina app on google play"/></a>
+
+                <div class="partners">
+                    <a href="http://smallbang.fr/" target="_blank" rel="noopener" class="partner"><img src="img/editor_smallbang.png" srcset="img/editor_smallbang.png 1x, img/editor_smallbang@2x.png 2x" alt="Smallbang"/></a>
+                    <a href="http://nouvelles-ecritures.francetv.fr/" target="_blank" rel="noopener" class="partner"><img src="img/editor_francetv.png" srcset="img/editor_francetv.png 1x, img/editor_francetv@2x.png 2x" alt="France TV — Nouvelles Ecritures"/></a>
+                    <a href="http://www.cnc.fr/web/fr" target="_blank" rel="noopener" class="partner last"><img src="img/editor_cnc.png" srcset="img/editor_cnc.png 1x, img/editor_cnc@2x.png 2x" alt="CNC"/></a>
+                </div>
+            </div>
+        </article>
+
+        <a href="index.html#" id="btn_menu">Menu</a>
+
+        <script type="text/javascript">
+            function updateCanvasLayout(canvasElem){
+
+                var dpr = window.devicePixelRatio || 1;
+                
+                var canvas_width = window.innerWidth;
+                var canvas_height = window.innerHeight;
+
+                // Handle Potrait by reversong width and height: canvas will be rotatet through css
+                if( canvas_height > canvas_width ){
+                    canvas_width = window.innerHeight;
+                    canvas_height = window.innerWidth;
+                    canvasElem.classList.add("portrait");
+                // Landscape
+                }else{
+                    canvasElem.classList.remove("portrait");
+                }
+
+                // Apply the right canvas size based on pixel density
+                canvasElem.style.width = canvas_width + "px";
+                canvasElem.style.height = canvas_height + "px";
+                canvasElem.width = canvas_width * dpr;
+                canvasElem.height = canvas_height * dpr;
+            }
+
+            var canvas = document.getElementById("renderer");
+            updateCanvasLayout(canvas);
+
+            //show Emscripten environment where the canvas is
+            var program ;
+
+            function onSurfaceChanged(){
+                updateCanvasLayout(canvas);
+
+                // save styles
+                var cstylew = canvas.style.width;
+                var cstyleh = canvas.style.height;
+
+                // Tell program to handle rotated canvas for touch scroll (uses vertical scroll on portrait)
+                program.setIsPortrait( window.innerHeight > window.innerWidth);
+                program.onSurfaceChanged(canvas.width, canvas.height);
+
+                //Have to restore the css style here because it is reset after c binding onSurfaceChanged call, do not know why yet
+                canvas.style.width = cstylew;
+                canvas.style.height = cstyleh;
+             }
+
+            var Module = {
+                onRuntimeInitialized: function() {
+                    program.init();
+
+                    onSurfaceChanged();
+
+                    document.getElementById("btn_start").onclick = function () {
+                        document.getElementById("menu").classList.add("invisible");
+                        setTimeout(function(){ 
+                            document.getElementById("btn_menu").classList.add("ready");
+                            document.getElementById("btn_start").textContent = "Continue reading";
+                            document.getElementById("menu").classList.add("displaynone");
+                        }, 200);
+                    };
+
+                    document.getElementById("btn_menu").onclick = function () {
+                        document.getElementById("menu").classList.remove("displaynone");
+                        document.getElementById("menu").classList.remove("invisible");
+                        document.getElementById("btn_menu").classList.remove("ready");
+                    };
+
+                    document.getElementById("cover").classList.add("ready");
+                    document.getElementById("renderer").classList.add("ready");
+                    document.getElementById("btn_start").classList.add("ready");
+                    document.getElementById("btn_loader").classList.add("ready");
+
+                    window.onresize = function () {
+                        waitForFinalEvent(function(){
+                            onSurfaceChanged();
+
+                        }, 500, "surfacechanged");
+                    };
+                }
+            };
+
+            Module['locateFile'] = function(path, prefix) {
+                if( prefix == "" ){
+                    var href = window.location.href;
+                    var dir = href.substring(0, href.lastIndexOf('/')) + "/";
+                    return dir+"/core/"+path
+                }
+                return prefix + path;
+            }
+
+            Module.canvas = canvas;
+
+            var waitForFinalEvent = (function () {
+              var timers = {};
+              return function (callback, ms, uniqueId) {
+                if (!uniqueId) {
+                  uniqueId = "Don't call this twice without a uniqueId";
+                }
+                if (timers[uniqueId]) {
+                  clearTimeout (timers[uniqueId]);
+                }
+                timers[uniqueId] = setTimeout(callback, ms);
+              };
+            })();
+        </script>
+
+        <script type="text/javascript" src="core/phallaina_core.js"></script>
+        <script type="text/javascript" src="js/phallaina_player.js"></script>
+
+        <script type="text/javascript">
+            var program = new PhallainaPlayer.Program(canvas);
+        </script>
+    </body>
+</html>

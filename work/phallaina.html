@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Christophe da Silva — Phallaina</title>
+    <meta name="author" content="Christophe da Silva">
+    <meta name="Description" content="A singular app that breaks from the canonical graphic novel format by delivering a narrative scrolling experience." />
+    <meta name="Copyright" content="copyright Christophe da Silva 2021" />
+
+    <meta property="og:title" content="Phallaina, Creating a unique reading experience">
+    <meta property="og:description" content="A singular app that breaks from the canonical graphic novel format by delivering a narrative scrolling experience.">
+    <meta property="og:image" content="http://cslv.me/assets/feature_phallaina.jpg">
+    <meta property="og:url" content="http://cslv.me/work/phallaina.html">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="http://cslv.me/assets/feature_phallaina.jpg">
+
+    <!-- Preload -->
+    <link href="../css/fonts/Moderat-Regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+    <link href="../css/fonts/Moderat-Medium.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
+    <link rel="author" href="../humans.txt" />
+    
+    <script defer src="../js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-543852-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-543852-7');
+    </script>
+</head>
+<body>
+<canvas id="renderer"></canvas>
+<div id="container">
+
+    <header>
+        <nav>
+            <h4><a href="../index.html">Christophe da Silva</a></h4>
+            <h4><a href="../index.html">UX/Product designer</a></h4>
+            <h4><a href="../index.html">Work</a><a href="../about.html" id="aboutbutton">About</a></h4>
+        </nav>
+    </header>
+
+    <div class="content casestudy">
+        <section class="grid chapter hero">
+            <h1>Creating a unique<br/>reading experience</h1>
+
+            <div class="meta">
+                <h4>Phallaina — mobile app<br/> <a href="http://cslv.me/phallaina/" target="_blank" rel="noopener">Online demo ↗</a></h4>
+            </div>
+            <div class="text">
+                <p class="emphasis">
+                    Phallaina is a singular app that breaks from the canonical graphic novel format by delivering a narrative scrolling experience. Visually, it spans the physical length of 1600 iPad screens, is over an hour of reading and includes an immersive soundtrack.
+                </p>
+            </div>
+        </section>
+
+        <div class="grid chapter">
+            <div class="wideimg device">
+                <div class="placeholder"> 
+                    <img src="../assets/phallaina/idevice_outline@2x.png" alt="iOS device"/>
+                    <video autoplay playsinline loop muted poster="../assets/phallaina/phallaina_frame1@2x.jpg"  class="asset reveal" loading="eager"> 
+                        <source src="../assets/phallaina/phallaina_app.mp4" type="video/mp4">
+                        <source src="http://cslv.me/assets/phallaina/phallaina_app.webm" type="video/webm; codecs=vp9,vorbis">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid chapter">
+            <div class="text">
+                <dl>
+                    <dt>Role</dt>
+                    <dd>Solo Software Engineer, Interaction Designer</dd>
+
+                    <dt>Activities</dt>
+                    <dd>UX & Interaction Design, Technical direction. C++, OpenGL, iOS & Android native app development.</dd>
+                </dl>
+            </div>
+                    
+            <div class="text">
+                <p>
+                    The traditional paginated book structure is directly tied to the medium itself, inherited from the original codex that brought a superior practicality over ancient <a href="https://en.wikipedia.org/wiki/Scroll" target="_blank" rel="noopener">scrolls</a>. Since digital apps are liberated from such physical limitations, it opens up possibilities of different ways for the readers to interact with a story.
+                </p>
+
+                <h3>Helping users to navigate 1600 screens.</h3>
+                <p class="emphasis">
+                    Inspired by physical books, we focused on two fundamental interaction patterns: to display the reader’s progress and let them explore all parts of the story.
+                </p>
+                <div class="inlineimg">
+                    <img src="../assets/phallaina/phallaina_linear.svg" class="lazy" data-src="../assets/phallaina/phallaina_linear.svg" data-srcset="" alt="Timeline"/>
+                </div>
+            </div>
+
+
+            <div class="text">
+                <p>
+                    Instead of trying to fit a preview of 1600 screens, we designed a simple linear timeline representing the chapter structure, the reading progression and current position. I did refine the UI by precisely crafting states, interactions, and visual feedbacks directly through code.
+                </p>
+            </div>
+
+            <div class="trio one">
+                <img src="../assets/phallaina/phallaina_micro_interaction.gif" data-src="../assets/phallaina/phallaina_micro_interaction.gif" data-srcset="" class="lazy"  alt="The timeline UI, to navigate the whole story."/>
+                <span class="caption">Precisely crafting states, interactions, and visual feedbacks directly through code.</span>
+            </div>
+            
+            <div class="trio two">
+                <img src="../assets/phallaina/phallaina_micro_2.preview.jpg" data-src="../assets/phallaina/phallaina_micro_2.jpg" class="lazy" data-srcset="../assets/phallaina/phallaina_micro_2.jpg 1x, ../assets/phallaina/phallaina_micro_2@2x.jpg 2x" alt="Snaps to closest chapter."/>
+                <span class="caption">Snaps position to closest chapter</span>
+            </div>
+
+            <div class="trio three">
+                <img src="../assets/phallaina/phallaina_micro_3.preview.jpg" data-src="../assets/phallaina/phallaina_micro_3.jpg" class="lazy" data-srcset="../assets/phallaina/phallaina_micro_3.jpg 1x, ../assets/phallaina/phallaina_micro_3@2x.jpg 2x" alt="Rotates when close to the border."/>
+                <span class="caption">Rotates when close to the border.</span>
+            </div>
+
+            <div class="text">
+                <h3>Designing a creative workflow</h3>
+                <p>
+                    My role was to lead both the technical and interaction design aspects. How do you turn a 1600 screen story idea into an actual thing? When we started prototyping the concept in 2014, there was no authoring tool for us to make a 60fps native app directly from the drawings, animations and sound/assets.
+                </p>
+
+                <div class="inlineimg">
+                    <img src="../assets/phallaina/phallaina_aftereffects.preview.jpg" data-src="../assets/phallaina/phallaina_aftereffects.jpg" class="lazy" data-srcset="../assets/phallaina/phallaina_aftereffects.jpg 1x, ../assets/phallaina/phallaina_aftereffects@2x.jpg 2x" alt="After Effects as an authoring tool for Phallaina"/>
+                    <span class="caption">After Effects as an authoring tool for Phallaina</span>
+                </div>
+
+                <p>
+                    By observing how the illustrator and the animator were used to work, I decided to rely on the tools they were already comfortable with: Adobe Photoshop and After Effects. My goal was to preserve the iterative aspect of the creative process nd move the effort on the technology side.
+                </p>
+
+                <div class="inlineimg">
+                    <img src="../assets/phallaina/phallaina_workflow.preview.jpg" data-src="../assets/phallaina/phallaina_workflow.jpg" class="lazy" data-srcset="../assets/phallaina/phallaina_workflow.jpg 1x, ../assets/phallaina/phallaina_workflow@2x.jpg 2x" alt="Phallain app workflow"/>
+                </div>
+                
+               <p>
+                    Directly authoring the scenes on After Effects, to be exported through our set of tools to be directly usable by our custom rendering engine.
+                </p>
+            </div>
+
+            <div class="wideimg">
+                <img src="../assets/phallaina/phallaina_tiles.preview.jpg" data-src="../assets/phallaina/phallaina_tiles.jpg" class="lazy" data-srcset="../assets/phallaina/phallaina_tiles.jpg 1x, ../assets/phallaina/phallaina_tiles@2x.jpg 2x" alt="An example of how the story was cut in multiples tiles."/>
+                <span class="caption">An example of how the story was cut in multiples tiles.</span>
+            </div>
+
+            <div class="wideimg">
+                <img src="../assets/phallaina/phallaina_spriteboard.preview.jpg" data-src="../assets/phallaina/phallaina_spriteboard.jpg" class="lazy" data-srcset="../assets/phallaina/phallaina_spriteboard.jpg 1x, ../assets/phallaina/phallaina_spriteboard@2x.jpg 2x" alt="A texture sprite board for dynamic elements and paralax."/>
+                <span class="caption">A texture sprite board for dynamic elements and paralax.</span>
+            </div>
+
+            <div class="text">
+                <h3>A custom rendering engine</h3>
+                <p>
+                    Behind the 2D reading experience, there is actually a camera moving horizontally through a 3D environment. I wanted to ensure a constant 60fps flow while loading the/assets on the fly, and not be limited with scene description formats or the rendering effects ideas we could come up with. At the end of the day, what we needed was a specialized 3D framework in black and white. This looked super fun to code, so I decided to write the entire thing from scratch using C++ and OpenGL, for it to support both the iOS and Android platforms. I have ported a <a href="../phallaina/index.html" target="_blank">demo</a> to the web via <a href="https://emscripten.org/" target="_blank" rel="noopener">Emscripten</a> and WebAssembly.
+                </p>
+
+                <div class="inlineimg">
+                    <img src="../assets/phallaina/phallaina_structure.preview.jpg" data-src="../assets/phallaina/phallaina_structure.jpg" class="lazy" data-srcset="../assets/phallaina/phallaina_structure.jpg 1x, ../assets/phallaina/phallaina_structure@2x.jpg 2x" alt="The different software components of Phallaina"/>
+                    <span class="caption">The different software components of Phallaina</span>
+                </div>
+                <p>
+                    The end result was a compact and efficient 2D/3D engine that supports scene loaders, asynchronous/assets management, <a href="https://blog.mapbox.com/drawing-text-with-signed-distance-fields-in-mapbox-gl-b0933af6f817" target="_blank" rel="noopener">distance field text rendering</a>, scene graph, motion paths, GLSL shaders and basic special effects.
+                </p>
+                <p>
+                    The speech dialogues had to be completely dynamic and translated in English, French or any other future language. Fine typographic rendering is a tricky thing to implement in OpenGL, but a more challenging one was actually the speech balloons. To obtain a shape with a hand drawing feel to it, I designed an algorithm that generates a dynamic polygon outline around the text that stretches a brush texture with natural pressure variations.
+                </p>
+            </div>
+
+            <div class="wideimg">
+                <img src="../assets/phallaina/phallaina_text_rendering.preview.jpg" data-src="../assets/phallaina/phallaina_text_rendering.jpg" class="lazy" data-srcset="../assets/phallaina/phallaina_text_rendering.jpg 1x, ../assets/phallaina/phallaina_text_rendering@2x.jpg 2x" alt="How the speech balloons are rendered."/>
+                <span class="caption">How the speech balloons are rendered.</span>
+            </div>
+
+            <div class="text">
+                <h3>Teamwork</h3>
+                <p>
+                    Phallaina can be seen as a design response to the opportunity of exploring new graphic novel reading experiences. Behind such a simple and minimalist result, we made tremendous efforts as a team to create a product greater than the sum of it parts.
+                </p>
+
+                <p>Phallaina is a <a href="http://smallbang.fr/" target="_blank">SmallBang</a> & <a href="http://phallaina.nouvelles-ecritures.francetv.fr" target="_blank" rel="noopener">France Télévisions</a> Production</p>
+            </div>
+
+        <!-- Credits -->
+            <div class="list left">
+                <dl>
+                    <dt>Author and Illustrator</dt>
+                    <dd><a href="https://mariettaren.com" target="_blank" rel="noopener">Marietta Ren</a></dd>
+
+                    <dt>Animator</dt>
+                    <dd><a href="https://www.julienbaret.com" target="_blank" rel="noopener">Julien Baret</a></dd>
+
+                    <dt>Sound Engineer</dt>
+                    <dd><a href="https://comejalibert.com" target="_blank" rel="noopener">Côme Jalibert</a></dd>
+                </dl>
+            </div>
+            <div class="list right">
+                <dl>
+                    <dt>Software Engineer & UX Designer</dt>
+                    <dd>Christophe da Silva</dd>
+
+                    <dt>Graphic Designer</dt>
+                    <dd><a href="https://www.davidbenmussa.net" target="_blank" rel="noopener">David Benmussa</a></dd>
+
+                    <dt>Assistant Director</dt>
+                    <dd>Martin Bessin</dd>
+                </dl>
+            </div>
+
+
+            <!-- Awards -->
+            <div class="list left">
+                <h3>Awards</h3>
+                <dl>
+                    <dt>The Webby Awards</dt>
+                    <dd><a href="https://www.webbyawards.com/winners/2016/mobile-sites-apps/general-sites-apps/entertainment/phallaina/?" target="_blank" rel="noopener">2016 Nominee</a></dd>
+
+                    <dt>FWA</dt>
+                    <dd><a href="https://thefwa.com/cases/phallaina" target="_blank" rel="noopener">Mobile site of the day, 27 Feb. 2016</a></dd>
+
+                    <dt>Peabody</dt>
+                    <dd><a href="http://www.peabodyawards.com/stories/story/2016-peabody-facebook-futures-of-media-awards" target="_blank" rel="noopener">Future of Media Awards 2016</a></dd>
+                </dl>
+            </div>
+            <div class="list right">
+                <h3>&nbsp;</h3>
+                <dl>
+                    <dt>Japan Media Arts Festival</dt>
+                    <dd><a href="http://archive.j-mediaarts.jp/en/festival/2017/manga/works/20mj_phallaina/" target="_blank" rel="noopener">Jury Selection 2017</a></dd>
+
+                    <dt>Future of Story Telling</dt>
+                    <dd><a href="https://futureofstorytelling.org/project/phallaina" target="_blank" rel="noopener">Mobile 2017</a></dd>
+                </dl>
+            </div>
+
+            <div class="wideimg">
+                <img src="../assets/phallaina/phallaina_end.preview.jpg" data-src="../assets/phallaina/phallaina_end.jpg" class="lazy" data-srcset="../assets/phallaina/phallaina_end.jpg 1x, ../assets/phallaina/phallaina_end@2x.jpg 2x" alt="Phallain app"/>
+            </div>
+        </div>
+
+        <!-- End of content -->
+    </div>
+
+    <div class="content">
+        <!-- Other projects -->
+        <div class="grid also">
+            <div class="item one">
+                <a href="aic.html">
+                    <h4>Art Institute of Chicago</h4>
+                    <h2>A museum<br/>in the digital age</h2>
+                </a>
+            </div>
+            <div class="item two">
+                <a href="precision-run.html">
+                    <h4>Precision Run — mobile app</h4>
+                    <h2>A running studio<br/>companion app</h2>
+                </a>
+            </div>
+            <div class="item three">
+                <a href="rookery.html">
+                    <h4>Rookery</h4>
+                    <h2>Helping art collectors<br/>to create exhibitions</h2>
+                </a>
+            </div>
+            <div class="item four">
+                <a href="nytco.html">
+                    <h4>The New York Times Company</h4>
+                    <h2>Radical<br/>Simplification</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="aboutoverlay"></div>
+
+    <!-- Footer -->
+    <footer class="grid">
+        <p class="caption">Design, code, and copy by Christophe da Silva.<br/>Copyright © 2021 Christophe da Silva, All assets, arworks, and screenshots are copyright of their respective owners.</p>
+    </footer>
+
+    <!-- End of container -->
+</div>   
+</body>
+</html>

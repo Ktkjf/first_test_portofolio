@@ -1,0 +1,14 @@
+/* TEAM */
+
+Name: Christophe da Silva
+Role: Design, code and writing
+Twitter: @christophe_slv
+Location: Brooklyn, NY
+
+                                              
+/* SITE */
+                  
+Last update: 2020/03/08
+Standards: HTML5, CSS3, ES6, GLSL
+Components: no framework 
+Software: Figma, VSCode
