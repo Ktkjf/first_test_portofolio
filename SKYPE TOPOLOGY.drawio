@@ -90,7 +90,7 @@
         <mxCell id="nmX9eyuwtljYYOWFSkWK-67" value="" style="group" vertex="1" connectable="0" parent="nmX9eyuwtljYYOWFSkWK-71">
           <mxGeometry x="15" width="180" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="nmX9eyuwtljYYOWFSkWK-26" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#ffffff;strokeColor=#006EAF;strokeWidth=2;" vertex="1" parent="nmX9eyuwtljYYOWFSkWK-67">
+        <mxCell id="nmX9eyuwtljYYOWFSkWK-26" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=default;fontColor=#ffffff;strokeColor=#006EAF;strokeWidth=2;" vertex="1" parent="nmX9eyuwtljYYOWFSkWK-67">
           <mxGeometry x="15" width="160" height="150" as="geometry" />
         </mxCell>
         <mxCell id="nmX9eyuwtljYYOWFSkWK-4" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.skype_for_business_user;" vertex="1" parent="nmX9eyuwtljYYOWFSkWK-67">
