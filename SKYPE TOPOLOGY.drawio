@@ -90,6 +90,12 @@
         <mxCell id="nmX9eyuwtljYYOWFSkWK-21" value="" style="image;html=1;image=img/lib/clip_art/networking/Firewall_02_128x128.png;portConstraintRotation=0;flipH=1;" vertex="1" parent="nmX9eyuwtljYYOWFSkWK-25">
           <mxGeometry x="55.879999999999995" width="73.25" height="190" as="geometry" />
         </mxCell>
+        <mxCell id="nmX9eyuwtljYYOWFSkWK-29" value="&lt;b&gt;Pool serveur frontaux Skype CEET&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="49" y="138" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nmX9eyuwtljYYOWFSkWK-30" value="&lt;b&gt;Pool utilisateur Skype CEET&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="105" y="610" width="180" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
