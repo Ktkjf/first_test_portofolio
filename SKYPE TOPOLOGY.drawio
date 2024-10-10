@@ -132,7 +132,7 @@
             <mxPoint x="230" y="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nmX9eyuwtljYYOWFSkWK-33" value="&lt;b&gt;Ports: TCP/443, TCP/5061, UDP/3478&lt;/b&gt;&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="nmX9eyuwtljYYOWFSkWK-73">
+        <mxCell id="nmX9eyuwtljYYOWFSkWK-33" value="&lt;b&gt;Ports: TCP/443, TCP/5061, UDP/3478, 5269&amp;nbsp;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="nmX9eyuwtljYYOWFSkWK-73">
           <mxGeometry y="47.5" width="160" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nmX9eyuwtljYYOWFSkWK-11" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=90;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="nmX9eyuwtljYYOWFSkWK-73">
